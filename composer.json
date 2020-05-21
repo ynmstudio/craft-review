@@ -11,8 +11,8 @@
     "review"
   ],
   "support": {
-    "docs": "https://github.com/ynmstudio/review/blob/master/README.md",
-    "issues": "https://github.com/ynmstudio/review/issues"
+    "docs": "https://github.com/ynmstudio/craft-review/blob/master/README.md",
+    "issues": "https://github.com/ynmstudio/craft-review/issues"
   },
   "license": "MIT",
   "authors": [
@@ -34,7 +34,7 @@
     "handle": "review",
     "developer": "Denis Yilmaz",
     "developerUrl": "https://ynm.studio",
-    "documentationUrl": "https://github.com/ynmstudio/review/blob/master/README.md",
+    "documentationUrl": "https://github.com/ynmstudio/craft-review/blob/master/README.md",
     "changelogUrl": "https://raw.githubusercontent.com/ynmstudio/review/master/CHANGELOG.md",
     "class": "ynmstudio\\review\\Review"
   }
