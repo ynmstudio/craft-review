@@ -2,7 +2,7 @@
   "name": "ynmstudio/craft-review",
   "description": "See all entries that are not published yet and need to be reviewed by an administrator.",
   "type": "craft-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "craft",
     "cms",
