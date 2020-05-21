@@ -29,11 +29,15 @@
 
 <table class="fullwidth">
     <tbody>
-        {% for draft in drafts %}
-            {% set typeName = craft.review.getTypeName(draft.type) %}
-            <tr>
-                <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.title }}</a> <span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span></td>
-            </tr>
-        {% endfor %}
+        {% if drafts is empty %}
+            <tr><td><span class="light">{{'No Entries to review'|t}}</span></td></tr>
+        {% else %}
+            {% for draft in drafts %}
+                {% set typeName = craft.review.getTypeName(draft.type) %}
+                <tr>
+                    <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.title }}</a> <span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span></td>
+                </tr>
+            {% endfor %}
+        {% endif %}
     </tbody>
 </table>

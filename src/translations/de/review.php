@@ -26,6 +26,6 @@ return [
     'Ready for review' => 'Bereit zur Freigabe',
     '{section} ready for review' => '{section} bereit zur Freigabe',
     'Limit' => 'Begrenzung',
-    'Enter a limit here.' => 'Wieviele Einträge sollen angezeigt werden?'
-
+    'Enter a limit here.' => 'Wieviele Einträge sollen angezeigt werden?',
+    'No Entries to review' => 'Keine Einträge zum freigeben'
 ];
