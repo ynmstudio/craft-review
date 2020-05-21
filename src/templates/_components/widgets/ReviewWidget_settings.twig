@@ -1,0 +1,41 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Review plugin for Craft CMS
+ *
+ * Review Widget Widget Settings
+ *
+ * @author    Denis Yilmaz
+ * @copyright Copyright (c) 2020 Denis Yilmaz
+ * @link      https://ynm.studio
+ * @package   Review
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{# {% do view.registerAssetBundle("ynmstudio\\review\\assetbundles\\reviewwidgetwidget\\ReviewWidgetWidgetAsset") %} #}
+
+{{ forms.textField({
+    label: 'Limit'|t,
+    instructions: 'Enter a limit here.'|t,
+    id: 'limit',
+    name: 'limit',
+    value: widget['limit']})
+}}
+
+{% set sections = craft.review.getAllSectionOptions() %}
+
+{# Include a hidden input first so Craft knows to update the
+   existing value, if no options are selected. #}
+{# {{ hiddenInput('widget[section]', '') }} #}
+
+{{ forms.selectField({
+    label: 'Sections'|t,
+    instructions: 'From which section do you want to show entries to be reviewed?'|t,
+    id: 'section',
+    name: 'section',
+    options: craft.review.getAllSectionOptions(),
+    value: widget['section']})
+}}

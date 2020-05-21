@@ -1,0 +1,41 @@
+{
+  "name": "ynmstudio/craft-review",
+  "description": "See all entries that are not published yet and need to be reviewed by an administrator.",
+  "type": "craft-plugin",
+  "version": "1.0.1",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "review"
+  ],
+  "support": {
+    "docs": "https://github.com/ynmstudio/review/blob/master/README.md",
+    "issues": "https://github.com/ynmstudio/review/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Denis Yilmaz",
+      "homepage": "https://ynm.studio"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ynmstudio\\review\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Review",
+    "handle": "review",
+    "developer": "Denis Yilmaz",
+    "developerUrl": "https://ynm.studio",
+    "documentationUrl": "https://github.com/ynmstudio/review/blob/master/README.md",
+    "changelogUrl": "https://raw.githubusercontent.com/ynmstudio/review/master/CHANGELOG.md",
+    "class": "ynmstudio\\review\\Review"
+  }
+}

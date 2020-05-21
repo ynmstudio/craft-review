@@ -1,0 +1,39 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Review plugin for Craft CMS
+ *
+ * Review Widget Widget Body
+ *
+ * @author    Denis Yilmaz
+ * @copyright Copyright (c) 2020 Denis Yilmaz
+ * @link      https://ynm.studio
+ * @package   Review
+ * @since     1.0.0
+ */
+#}
+
+{# {% set iconUrl = view.getAssetManager().getPublishedUrl('@ynmstudio/review/assetbundles/reviewwidgetwidget/dist', true) ~ '/img/ReviewWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ limit }}</p> #}
+
+{% set drafts = craft.entries()
+    .section([section])
+    .status(['disabled', 'pending'])
+    .orderBy('dateUpdated desc')
+    .limit(limit)
+    .all() %}
+
+
+<table class="fullwidth">
+    <tbody>
+        {% for draft in drafts %}
+            {% set typeName = craft.review.getTypeName(draft.type) %}
+            <tr>
+                <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.title }}</a> <span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
