@@ -30,7 +30,7 @@
 <table class="fullwidth">
     <tbody>
         {% if drafts is empty %}
-            <tr><td><span class="light">{{'No Entries to review'|t}}</span></td></tr>
+            <tr><td><span class="light">{{'No entries to review'|t}}</span></td></tr>
         {% else %}
             {% for draft in drafts %}
                 {% set typeName = craft.review.getTypeName(draft.type) %}

@@ -27,5 +27,5 @@ return [
     '{section} ready for review' => '{section} ready for review',
     'Limit' => 'Limit',
     'Enter a limit here.' => 'Enter a limit here.',
-    'No Entries to review' => 'No Entries to review'
+    'No entries to review' => 'No entries to review'
 ];
