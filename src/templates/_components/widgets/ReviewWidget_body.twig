@@ -21,11 +21,31 @@
 
 {% set drafts = craft.entries()
     .section([section])
-    .status(['disabled', 'pending'])
+    .status(['disabled', 'pending', 'draft'])
     .orderBy('dateUpdated desc')
     .limit(limit)
     .all() %}
 
+<table class="fullwidth">
+    <tbody>
+        {% if drafts is empty %}
+            <tr><td><span class="light">{{'No entries to review'|t}}</span></td></tr>
+        {% else %}
+            {% for draft in drafts %}
+                {% set typeName = craft.review.getTypeName(draft.type) %}
+                <tr>
+                    <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.title }}</a> <span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span></td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% set drafts = craft.entries()
+    .section([section])
+    .drafts()
+    .limit(limit)
+    .all() %}
 
 <table class="fullwidth">
     <tbody>
