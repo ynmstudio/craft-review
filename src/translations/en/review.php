@@ -19,7 +19,7 @@
  *
  * @author    Denis Yilmaz
  * @package   Review
- * @since     1.0.5
+ * @since     1.0.8
  */
 return [
     'Review plugin loaded' => 'Review plugin loaded',
@@ -28,5 +28,6 @@ return [
     'Limit' => 'Limit',
     'Enter a limit here.' => 'Enter a limit here.',
     'No entries to review' => 'No entries to review',
+    'No drafts to review' => 'No drafts to review',
     'New Drafts' => 'New Drafts'
 ];

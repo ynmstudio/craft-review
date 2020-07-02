@@ -19,7 +19,7 @@
  *
  * @author    Denis Yilmaz
  * @package   Review
- * @since     1.0.5
+ * @since     1.0.8
  */
 return [
     'Review plugin loaded' => 'Review Plugin aktiviert',
@@ -28,5 +28,6 @@ return [
     'Limit' => 'Begrenzung',
     'Enter a limit here.' => 'Wieviele Einträge sollen angezeigt werden?',
     'No entries to review' => 'Keine Einträge zum freigeben',
+    'No drafts to review' => 'Keine unveröffentlichten Entwürfe zum freigeben',
     'New Drafts' => 'Unveröffentlichte Entwürfe'
 ];
