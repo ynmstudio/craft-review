@@ -19,7 +19,7 @@
  *
  * @author    Denis Yilmaz
  * @package   Review
- * @since     1.0.0
+ * @since     1.0.5
  */
 return [
     'Review plugin loaded' => 'Review plugin loaded',

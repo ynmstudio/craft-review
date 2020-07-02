@@ -60,7 +60,7 @@
             {% for draft in drafts %}
                 {% set typeName = craft.review.getTypeName(draft.type) %}
                 <tr>
-                    <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.draftName }} ({{ draft.title }})</a><span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span><br /><span>{{ draft.draftNote }}</span></td>
+                    <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.draftName }} ({{ draft.title }})</a><span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span><br /><span>{{ draft.draftNotes }}</span></td>
                 </tr>
             {% endfor %}
         {% endif %}
