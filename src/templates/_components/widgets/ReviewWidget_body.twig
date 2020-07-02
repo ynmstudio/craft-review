@@ -45,7 +45,8 @@
 
 {% set drafts = craft.entries()
     .section([section])
-    .revisions()
+    .drafts()
+    .orderBy('dateUpdated desc')
     .limit(limit)
     .all() %}
 
