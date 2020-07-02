@@ -29,7 +29,7 @@
 <table class="fullwidth">
     <tbody>
         {% if drafts is empty %}
-            <tr><td><span class="light">{{'No entries to review'|t}}</span></td></tr>
+            <tr><td><span class="light">{{'No entries to review'|t('review')}}</span></td></tr>
         {% else %}
             {% for draft in drafts %}
                 {% set typeName = craft.review.getTypeName(draft.type) %}
@@ -51,16 +51,16 @@
     .all() %}
 {% if drafts is not empty %}
 <hr />
-<h3>{{'New Drafts'|t}}</h3>
+<h3>{{'New Drafts'|t('review')}}</h3>
 <table class="fullwidth">
     <tbody>
         {% if drafts is empty %}
-            <tr><td><span class="light">{{'No entries to review'|t}}</span></td></tr>
+            <tr><td><span class="light">{{'No entries to review'|t('review')}}</span></td></tr>
         {% else %}
             {% for draft in drafts %}
                 {% set typeName = craft.review.getTypeName(draft.type) %}
                 <tr>
-                    <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.draftName }} ({{ draft.title }})</a><span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span><br /><span>{{ draft.draftNotes }}</span></td>
+                    <td><h6>{{typeName}}</h6> <a href="{{ draft.getCpEditUrl() }}">{{ draft.title }} ({{ draft.draftName }})</a> <span class="light">{{draft.dateUpdated|date}}, {{draft.author}}</span><br /><span>{{ draft.draftNotes }}</span></td>
                 </tr>
             {% endfor %}
         {% endif %}
