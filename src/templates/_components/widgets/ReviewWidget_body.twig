@@ -21,7 +21,7 @@
 
 {% set drafts = craft.entries()
     .section([section])
-    .status(['disabled', 'pending', 'draft'])
+    .status(['disabled', 'pending'])
     .orderBy('dateUpdated desc')
     .limit(limit)
     .all() %}
@@ -41,9 +41,11 @@
     </tbody>
 </table>
 
+<hr />
+
 {% set drafts = craft.entries()
     .section([section])
-    .drafts()
+    .revisions()
     .limit(limit)
     .all() %}
 
