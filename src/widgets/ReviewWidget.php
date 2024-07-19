@@ -90,7 +90,7 @@ class ReviewWidget extends Widget
      *
      * @return array
      */
-    public function rules()
+    public function defineRules(): array
     {
         $rules = parent::rules();
         $rules = array_merge(
@@ -216,7 +216,7 @@ class ReviewWidget extends Widget
      *                      should not be visible. (If you don’t want the widget
      *                      to be selectable in the first place, use {@link isSelectable()}.)
      */
-    public function getBodyHtml()
+    public function getBodyHtml(): ?string
     {
         Craft::$app->getView()->registerAssetBundle(ReviewWidgetWidgetAsset::class);
 
@@ -232,7 +232,7 @@ class ReviewWidget extends Widget
     /**
      * @inheritdoc
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         if ($this->section !== '*') {
             $section = Craft::$app->getSections()->getSectionByHandle($this->section);
