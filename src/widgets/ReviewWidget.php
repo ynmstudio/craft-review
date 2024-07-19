@@ -199,7 +199,7 @@ class ReviewWidget extends Widget
      *
      * @return string|null
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate(
             'review/_components/widgets/ReviewWidget_settings',
