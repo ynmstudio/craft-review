@@ -72,7 +72,7 @@ class ReviewWidget extends Widget
      *
      * @return int|null The widget’s maximum colspan, if it has one
      */
-    public static function maxColspan()
+    public static function maxColspan(): ?int
     {
         return null;
     }
