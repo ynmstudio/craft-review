@@ -61,7 +61,8 @@ class ReviewVariable
             'label' => Craft::t('review', 'All'),
             'value' => '*'
         ]];
-        foreach (Craft::$app->sections->allSections as $field) {
+        $sections = Craft::$app->entries->allSections;
+        foreach ($sections as $field) {
             $options[] = [
                 'label' => $field['name'],
                 'value' => $field['handle']
@@ -85,7 +86,7 @@ class ReviewVariable
     {
         $typeName = $type;
 
-        [$entryType] = Craft::$app->getSections()->getEntryTypesByHandle($type);
+        [$entryType] = Craft::$app->entries->getEntryTypeByHandle($type);
 
         if ($entryType) {
             $typeName = $entryType->name;
