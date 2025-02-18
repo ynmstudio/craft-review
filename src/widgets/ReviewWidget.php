@@ -235,7 +235,7 @@ class ReviewWidget extends Widget
     public function getTitle(): ?string
     {
         if ($this->section !== '*') {
-            $section = Craft::$app->getSections()->getSectionByHandle($this->section);
+            $section = Craft::$app->entries->getSectionByHandle($this->section);
 
             if ($section) {
                 $title = Craft::t('review', '{section} ready for review', [
