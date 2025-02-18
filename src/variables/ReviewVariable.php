@@ -86,7 +86,7 @@ class ReviewVariable
     {
         $typeName = $type;
 
-        [$entryType] = Craft::$app->entries->getEntryTypeByHandle($type);
+        $entryType = Craft::$app->entries->getEntryTypeByHandle($type);
 
         if ($entryType) {
             $typeName = $entryType->name;
